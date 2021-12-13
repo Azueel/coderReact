@@ -1,3 +1,4 @@
+import { Item } from './components/Item';
 import { ItemListContainer } from './components/ItemListContainer';
 import { NavBar } from './components/NavBar';
 
@@ -9,6 +10,7 @@ function App() {
 			</header>
 			<body>
 				<ItemListContainer nombre="Alejo" />
+				<Item />
 			</body>
 		</div>
 	);
