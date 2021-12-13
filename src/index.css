@@ -11,7 +11,7 @@ a {
 }
 
 .bgNav {
-	background-color: rgb(24, 23, 23);
+	background-color: rgb(10, 10, 10);
 	padding: 1rem;
 }
 img {
@@ -26,4 +26,11 @@ img {
 	display: flex;
 	justify-content: center;
 	margin-left: 33rem;
+}
+
+.carrito {
+	background-image: url(/src/img/carrito2.jpg) !important;
+	height: 100vh !important;
+	width: 50vw !important;
+	background-repeat: no-repeat;
 }

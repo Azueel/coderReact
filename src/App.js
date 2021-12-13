@@ -1,11 +1,15 @@
+import { ItemListContainer } from './components/ItemListContainer';
 import { NavBar } from './components/NavBar';
 
 function App() {
 	return (
 		<div className="App">
-			<NavBar />
-			<h2 className="text-center m-5">Bienvenido a Sinergia</h2>
-			<div className="logo"></div>
+			<header>
+				<NavBar />
+			</header>
+			<body>
+				<ItemListContainer nombre="Alejo" />
+			</body>
 		</div>
 	);
 }
