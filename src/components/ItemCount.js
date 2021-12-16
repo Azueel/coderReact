@@ -1,38 +1,18 @@
-import { useState } from 'react';
+import React from 'react';
 
-export const ItemCount = ({ stock, initial, onAdd }) => {
-	const [stockRestante, setStockRestante] = useState(stock);
-	const [cantidad, setCantidad] = useState(initial);
-
-	const resta = () => {
-		if (cantidad === 1) {
-			return;
-		} else {
-			setCantidad(cantidad - 1);
-		}
-	};
-	const suma = () => {
-		if (cantidad === stockRestante) {
-			return;
-		} else {
-			setCantidad(cantidad + 1);
-		}
-	};
+export const ItemCount = ({ id, title, precio, imagen }) => {
 	return (
 		<>
-			<div className="d-flex justify-content-center">
-				<button className="btn btn-dark me-2 fs-4" onClick={resta}>
-					-
-				</button>
-				<label className="fs-3 mb-2">Cantidad: {cantidad}</label>
-				<button className="btn btn-dark ms-2" onClick={suma}>
-					+
-				</button>
-			</div>
-			<div className="d-flex justify-content-center m-4">
-				<button className="btn btn-primary p-3" onClick={onAdd}>
-					Agregar al Carrito
-				</button>
+			<div className="d-flex">
+				<div className="w-25 m-auto border border-3 border-dark mt-5 mb-3">
+					<h2 className="text-center">{title}</h2>
+					<img src={imagen} alt="tijera" className=" imgTijera w-100" />
+					<p className="bg-dark text-white text-center fs-3">Stock: 5</p>
+					<p className="fw-bold fs-2 text-center">Precio: {precio}</p>
+					<div className=" d-flex justify-content-center p-3">
+						<button className="btn btn-dark p-3 w-50 fs-5">Agregar A Carrito</button>
+					</div>
+				</div>
 			</div>
 		</>
 	);
